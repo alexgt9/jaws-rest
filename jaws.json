@@ -1,0 +1,19 @@
+{
+  "name": "jaws-rest",
+  "version": "0.0.1",
+  "location": "https://github.com/...",
+  "author": "",
+  "description": "",
+  "domain": "rest.com",
+  "stages": {
+    "dev": [
+      {
+        "region": "eu-west-1",
+        "iamRoleArnLambda": "arn:aws:iam::010285592474:role/dev-jaws-rest-r-IamRoleLambda-QDIJUAH60S4T",
+        "iamRoleArnApiGateway": "arn:aws:iam::010285592474:role/dev-jaws-rest-r-IamRoleApiGateway-W571H3M9JLNY",
+        "jawsBucket": "jaws.dev.euwest1.rest.com",
+        "restApiId": "t47ycgwzbj"
+      }
+    ]
+  }
+}

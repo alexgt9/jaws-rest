@@ -1,0 +1,29 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "jaws-rest lambdas",
+  "Parameters": {
+    "aaLambdaRoleArn": {
+      "Type": "String",
+      "Default": "arn:aws:iam::010285592474:role/dev-jaws-rest-r-IamRoleLambda-QDIJUAH60S4T"
+    }
+  },
+  "Resources": {
+    "lUserCreate": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Description": "",
+        "Handler": "aws_modules/user/create/handler.handler",
+        "MemorySize": 1024,
+        "Runtime": "nodejs",
+        "Timeout": 6,
+        "Code": {
+          "S3Bucket": "jaws.dev.euwest1.rest.com",
+          "S3Key": "JAWS/jaws-rest/dev/lambdas/lUserCreate@1449068391451.zip"
+        },
+        "Role": {
+          "Ref": "aaLambdaRoleArn"
+        }
+      }
+    }
+  }
+}
